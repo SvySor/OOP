@@ -1,6 +1,6 @@
 package org.example;
 
-public class Product extends Category {
+public class Product {
     private String name;
     private Double price;
     private Integer rating;
@@ -54,7 +54,7 @@ public class Product extends Category {
 
     @Override
     public String toString() {
-        return "Product{" +
+        return '\n' + "Product{" +
                 "name='" + name + '\'' +
                 ", price=" + price +
                 ", rating=" + rating +
