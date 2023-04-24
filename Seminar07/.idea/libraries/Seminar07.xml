@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="Seminar07">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/2.Observer.zip!/" />
+      <root url="jar://$PROJECT_DIR$/3.Adapter.zip!/" />
+      <root url="jar://$PROJECT_DIR$/1.DecoratorFactory.zip!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
