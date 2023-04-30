@@ -1,0 +1,9 @@
+
+†
+java:S1319A"pThe return type of this method should be an interface such as "List" rather than the implementation "ArrayList".(¹âì
+‹
+java:S1319E"pThe return type of this method should be an interface such as "List" rather than the implementation "ArrayList".(®ÚŒÁùÿÿÿÿ
+M
+java:S1117"7Rename "key" which hides the field declared at line 12.(¢é©’
+>
+java:S1068"(Remove this unused "name" private field.(Ë¥¼

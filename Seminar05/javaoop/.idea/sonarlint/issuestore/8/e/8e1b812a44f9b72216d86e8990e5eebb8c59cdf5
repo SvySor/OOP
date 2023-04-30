@@ -1,0 +1,18 @@
+
+Ÿ
+java:S1192 "ˆDefine a constant instead of duplicating this literal "Ğ’Ñ‹ Ğ½Ğµ Ğ·Ğ°Ñ€ĞµĞ³Ğ¸ÑÑ‚Ñ€Ğ¸Ñ€Ğ¾Ğ²Ğ°Ğ½Ñ‹ Ğ² ÑÑ‚Ğ¾Ğ¼ Ğ¼Ğ°Ğ³Ğ°Ğ·Ğ¸Ğ½Ğµ" 4 times.(•˜¡¯
+N	java:S106 "9Replace this use of System.out or System.err by a logger.(•˜¡¯
+l
+java:S3457%"Q%n should be used in place of \n to produce the platform-specific line separator.(î÷àûÿÿÿÿÿ
+S	java:S106%"9Replace this use of System.out or System.err by a logger.(î÷àûÿÿÿÿÿ
+N	java:S106*"9Replace this use of System.out or System.err by a logger.(•˜¡¯
+S	java:S106/"9Replace this use of System.out or System.err by a logger.(ï‘Ùêıÿÿÿÿ
+N	java:S106@"9Replace this use of System.out or System.err by a logger.(•˜¡¯
+S	java:S106E"9Replace this use of System.out or System.err by a logger.(ªğ³Éÿÿÿÿÿ
+N	java:S106R"9Replace this use of System.out or System.err by a logger.(•˜¡¯
+l
+java:S3457]"Q%n should be used in place of \n to produce the platform-specific line separator.(ĞÖâ°ıÿÿÿÿ
+S	java:S106]"9Replace this use of System.out or System.err by a logger.(ĞÖâ°ıÿÿÿÿ
+N	java:S106`"9Replace this use of System.out or System.err by a logger.(ÎÜ›»
+G
+java:S1068",Remove this unused "password" private field.(œãë­úÿÿÿÿ
