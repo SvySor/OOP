@@ -16,7 +16,7 @@ public class Menu {
     }
 
     public Commands commandChoiceProcess() {
-        System.out.println("Добрый день");
+        System.out.println("Добрый день. Вы вошли в телефонный справочник");
         System.out.println("Ввеите номер операции: \n" +
                 "1 - Найти запись\n" +
                 "2 - Добавить запись\n" +
