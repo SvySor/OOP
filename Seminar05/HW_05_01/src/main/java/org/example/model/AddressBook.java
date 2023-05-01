@@ -1,5 +1,7 @@
 package org.example.model;
 
+import java.io.File;
+import java.io.FileNotFoundException;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.util.ArrayList;
@@ -8,46 +10,53 @@ import java.util.Scanner;
 
 public class AddressBook {
     private String filePath;
+
     public AddressBook(String filePath) {
         this.filePath = filePath;
     }
 
-    public List<String> findRecord(String search){
-        Scanner sc = new Scanner(filePath);
+    public List<String> findRecord(String search) {
         List<String> book = new ArrayList<>();
-        while (sc.hasNextLine()){
-            String tmpLine = sc.nextLine();
-            if (tmpLine.contains(search)){
-                book.add(tmpLine);
+        try (Scanner sc = new Scanner(new File(filePath))) {
+            while (sc.hasNextLine()) {
+                String tmpLine = sc.nextLine();
+                if (tmpLine.contains(search)) {
+                    book.add(tmpLine);
+                }
             }
+        } catch (FileNotFoundException e) {
+            throw new RuntimeException(e);
         }
-        sc.close();
         return book;
     }
 
-    public void addRecord(String addString){
-        try(FileWriter fw = new FileWriter(filePath, true)){
+    public boolean addRecord(String addString) {
+        try (FileWriter fw = new FileWriter(filePath, true)) {
             fw.write(addString + "\n");
-        } catch (IOException e){
+            return true;
+        } catch (IOException e) {
             e.printStackTrace();
+            return false;
         }
     }
 
-    public void removeRecord(List<String> removeList){
+    public boolean removeRecord(List<String> removeList) {
         StringBuilder newBook = new StringBuilder();
-        Scanner sc = new Scanner(filePath);
-        while (sc.hasNextLine()){
-            String tmpLine = sc.nextLine();
-            if (! removeList.contains(tmpLine)){
-                newBook.append(tmpLine).append("\n");
-            } else {
-                removeList.remove(tmpLine);
+        try (Scanner sc = new Scanner(new File(filePath));
+             FileWriter fw = new FileWriter(filePath, false)){
+            while (sc.hasNextLine()) {
+                String tmpLine = sc.nextLine();
+                if (!removeList.contains(tmpLine)) {
+                    newBook.append(tmpLine).append("\n");
+                } else {
+                    removeList.remove(tmpLine);
+                }
             }
-        }
-        try(FileWriter fw = new FileWriter(filePath, false)){
             fw.write(newBook.toString());
-        } catch (IOException e){
+            return true;
+        } catch (IOException e) {
             e.printStackTrace();
+            return false;
         }
     }
 }
